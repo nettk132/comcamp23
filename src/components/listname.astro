@@ -4,35 +4,156 @@ import Container from "./Container.astro"
 
 <div id="list">
   <Container>
-    <div class="grid grid-cols-2 gap-4">
-      <div class="col-span-1">
-        <ol class="list-decimal">
-          <li>ชื่อ 1</li>
-          <li>ชื่อ 2</li>
-          <li>ชื่อ 3</li>
-          <!-- Add more list items here -->
-        </ol>
-      </div>
-      <div class="col-span-1">
-        <ol start="4" class="list-decimal">
-          <li>ชื่อ 4</li>
-          <li>ชื่อ 5</li>
-          <li>ชื่อ 6</li>
-          <!-- Add more list items here -->
-        </ol>
-      </div>
+    <div class="table-container">
+      <table class="w-full table-auto border-collapse">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 text-center font-bold text-white">ลำดับ</th>
+            <th class="px-4 py-2 text-center font-bold text-white">ชื่อ</th>
+            <th class="px-4 py-2 text-center font-bold text-white">โรงเรียน</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">1</td>
+            <td class="px-4 py-2 text-center text-white">อภิเชษฐ์ เทพนันตา</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรยีนีบ้านนาบัววิทยา</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">2</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 2</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 2</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">3</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">4</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">5</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">6</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">7</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">8</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">9</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">10</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 text-center text-white">11</td>
+            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </Container>
 </div>
 
 <style>
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    background: #000;
+    padding: 2px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 30px rgba(255, 20, 147, 0.6);
+    border: 2px solid rgba(255, 20, 147, 0.5);
   }
 
-  .list-decimal {
-    list-style-type: decimal;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: center;
+    color: white;
+  }
+
+  th {
+    background: rgba(255, 20, 147, 0.2);
+    color: #fff;
+  }
+
+  tr:nth-child(odd) {
+    background: #1f1f1f;
+  }
+
+  tr:nth-child(even) {
+    background: #444;
+  }
+
+  tr:hover {
+    background: rgba(255, 20, 147, 0.1);
+  }
+
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .table-container {
+      max-height: 200px; /* ลดความสูงตาราง */
+      border-radius: 8px; /* มุมมนเล็กลง */
+      padding: 1px; /* ลด padding */
+    }
+
+    table {
+      font-size: 0.9rem; /* ลดขนาดฟอนต์ */
+    }
+
+    th, td {
+      padding: 4px; /* ลด padding */
+    }
+
+    th {
+      font-size: 1rem; /* ปรับขนาดฟอนต์หัวตาราง */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .table-container {
+      max-height: 150px;
+      padding: 0;
+    }
+
+    table {
+      font-size: 0.8rem; /* ลดขนาดฟอนต์ลงอีก */
+    }
+
+    th, td {
+      padding: 2px;
+    }
+
+    th {
+      font-size: 0.9rem; /* ปรับฟอนต์หัวตารางสำหรับหน้าจอเล็กมาก */
+    }
   }
 </style>
