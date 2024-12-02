@@ -1,0 +1,79 @@
+---
+import Container from "./Container.astro"
+
+---
+
+<div class="relative" id="home">
+    <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+    </div>
+    <Container>
+        <div class="relative pt-36 ml-auto">
+          <div class="flex flex-wrap lg:flex-nowrap items-center lg:items-start mx-auto lg:space-x-8">
+            <!-- Content Section -->
+            <div class="lg:w-2/3 text-left">
+              <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl leading-relaxed">
+                COMCAMP CSMJU 23<br>
+                <span class="text-primary dark:text-white text-lg">
+                  เปิดรับสมัครแล้วตั้งเเต่วันที่ 5 ธันวาคม 2567 - 24 ธันวาคม 2567
+                </span>
+              </h1>
+              <p class="mt-8 text-gray-700 dark:text-gray-300">
+                ค่ายยุวชนคอมพิวเตอร์ หรือ คอมแคมป์ เป็นค่ายที่จัดขึ้นโดยสาขาวิชาวิทยาการคอมพิวเตอร์
+                คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้เพื่อเปิดโอกาสให้น้องๆที่สนใจเรียนรู้และฝึกฝนทักษะด้านคอมพิวเตอร์อย่างสนุกสนานเป็นเวลา
+                3 วัน 2 คืน โดยในปี พ.ศ. 2568 จัดขึ้นระหว่างวันที่ 24 ถึงวันที่ 26 มกราคม ณ มหาวิทยาลัยแม่โจ้ จังหวัดเชียงใหม่
+              </p>
+              <div class="mt-16 flex flex-wrap justify-start gap-y-4 gap-x-6">
+                <a
+                  href="https://forms.gle/3RM7Kxnd1EcDne8N8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                >
+                  <span class="relative text-base font-semibold text-white">สมัครเพื่อเข้าร่วม</span>
+                </a>
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1N8bczeXdI4PhjxYjxa45trhCv7Ybp_Wszi4W0QiHnqU/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-gray-500 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                >
+                  <span class="relative text-base font-semibold text-white">ดูรายชื่อ</span>
+                </a>
+              </div>
+            </div>
+          
+            <!-- Image Section -->
+            <div class="lg:w-1/3 mt-8 lg:mt-0">
+              <img
+                src="public/images/logo.PNG"
+                alt="ภาพประกอบ"
+                class="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+          
+            <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
+                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                    <img src="./public/images/comkub.jpg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
+                  </div>
+                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                  <img src="./public/images/studio.png" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
+                </div>
+                <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+                  <img src="public/images/logo.PNG" class="h-9 w-auto m-auto" loading="lazy" alt="client logo" width="" height="" />
+                </div>
+                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                    <img src="public/images/logo.PNG" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
+                  </div>
+                  <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+                    <img src="public/images/logo.PNG" class="h-8 w-auto m-auto" loading="lazy" alt="client logo" width="" height="" />
+                  </div>
+                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                    <img src="public/images/logo.PNG" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
+                </div>
+              </div>
+        </div>
+    </Container>
+</div>

@@ -1,0 +1,80 @@
+---
+import Container from "./Container.astro"
+
+---
+
+<div class="relative py-16 text-gray-600 dark:text-gray-300">
+  <div aria-hidden="true" class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+    <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+    <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+  </div>
+  <Container>
+    <div class="mb-20 space-y-4 px-6 md:px-0">
+      <h2 class="text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+       คำถามที่พบบ่อย
+      </h2>
+    </div>
+    <div class="md:columns-2 lg:columns-3 gap-8 space-y-8">
+      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+        <div class="flex gap-4">
+          <img class="w-12 h-12 rounded-full" src="public/images/boy_2.png" alt="user avatar" width="400" height="400" loading="lazy">
+          <div>
+            <h6 class="text-lg font-medium text-gray-700 dark:text-white">ค่ายนี้เหมาะกับใครบ้างคะ</h6>
+            
+          </div>
+        </div>
+        <p class="mt-8">ค่ายนี้ดีสุด ๆ จากคนที่ไม่มีพื้นฐาน แต่ก็สามารถเข้าใจได้โดยง่าย และสนุกสนาน เป็นกันเอง แนะนำเลยไม่ผิดหวังครับ</p>
+      </div>
+      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+        <div class="flex gap-4">
+          <img class="w-12 h-12 rounded-full" src="public/images/girl.png" alt="user avatar" width="200" height="200" loading="lazy">
+          <div>
+            <h6 class="text-lg font-medium text-gray-700 dark:text-white">ค่ายนี้จัดที่ไหนครับ</h6>
+           
+          </div>
+        </div>
+        <p class="mt-8">ค่ายนี้จัดที่ ตึก 60 ปี คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้ 63 หมู่ 4 ตำบลหนองหาร อำเภอสันทราย จังหวัดเชียงใหม่ 50200 ประเทศไทย (Science Learning Center) ค่ะ</p>
+      </div>
+      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+        <div class="flex gap-4">
+          <img class="w-12 h-12 rounded-full" src="public/images/girl_2.png" alt="user avatar" width="200" height="200" loading="lazy">
+          <div>
+            <h6 class="text-lg font-medium text-gray-700 dark:text-white">ค่ายนี้มีกิจกรรมอะไรบ้างกันบ้างคะ</h6>
+           
+          </div>
+        </div>
+        <p class="mt-8">ค่ายนี้มีกิจกรรมหลัก ๆ อยู่ 2 สวน ส่วนแรกเป็นการเรียนการสอน ได้แก่ การเรียนรู้ทางทฤษฎี การฝึกฝนทักษะและการสร้างชิ้นงานนำเสนอค่ะ ส่วนอันที่สองเป็นกิจกรรมร่วมสนุกที่ทางพวกพี่ ๆ ได้จัดเตรียมให้ค่ะ ส่วนจะเป็นอะไรนั้นต้องรอลุ้นกันในค่ายนะคะ :)</p>
+      </div>
+      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+        <div class="flex gap-4">
+          <img class="w-12 h-12 rounded-full" src="public/images/boy_2.png" alt="user avatar" width="200" height="200" loading="lazy">
+          <div>
+            <h6 class="text-lg font-medium text-gray-700 dark:text-white">ไม่มีพื้นฐานทางด้านคอมพิวเตอร์เลย สามารถมาสมัครได้มั้ยครับ?</h6>
+           
+          </div>
+        </div>
+        <p class="mt-8">ไม่จำเป็นต้องมีความรู้พื้นฐานอะไรมาก่อน น้อง ๆ ก็สามารถมาได้ แต่ถ้ามีความรู้พื้นฐานอยู่แล้วก็จะเป็นประโยชน์ต่อการเรียนรู้ในค่ายค่ะ</p>
+      </div>
+      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+        <div class="flex gap-4">
+          <img class="w-12 h-12 rounded-full" src="public/images/girl_2.png" alt="user avatar" width="200" height="200" loading="lazy">
+          <div>
+            <h6 class="text-lg font-medium text-gray-700 dark:text-white">ต้องเตรียมอุปกรณ์อะไรมาบ้างคะ?</h6>
+           
+          </div>
+        </div>
+        <p class="mt-8">ต้องเตรียมคอมพิวเตอร์แบบพกพา (Laptop) ส่วนตัวมาเองเพื่อใช้ในการเรียนการสอน รวมทั้งเสื้อผ้าชุดนอนสำหรับการอยู่ใน 2 คืน 3 วันค่ะ</p>
+      </div>
+      <div class="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none">
+        <div class="flex gap-4">
+          <img class="w-12 h-12 rounded-full" src="public/images/girl_2.png" alt="user avatar" width="200" height="200" loading="lazy">
+          <div>
+            <h6 class="text-lg font-medium text-gray-700 dark:text-white">ค่ายนี้มีเกณฑ์การรับคน หรือการสมัครอย่างไรบ้างคะ</h6>
+           
+          </div>
+        </div>
+        <p class="mt-8">เกณฑ์การคัดเลือกจะพิจารณาจากความถูกค้องที่ระบุในการสมัครค่ะ ถ้าน้องกรอกข้อมูลที่ระบุในการสมัครครบถ้วนก็เข้าร่วมกับทางค่ายได้เลยค่ะ จนกว่าจะเต็มจำนวนที่รับสมัครไว้</p>
+      </div>
+  </Container>
+  
+</div>

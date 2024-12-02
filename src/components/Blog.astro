@@ -1,0 +1,75 @@
+---
+import Container from "./Container.astro"
+
+---
+
+<div id="blog">
+  <Container>
+      <div class="mb-12 space-y-2 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">เกี่ยวกับเรา</h2>
+        <p class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300">
+          สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้
+        </p>
+      </div>
+      <div class="flex justify-center items-center">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2 items-start">
+          <!-- การ์ดที่ 1 -->
+          <div class="group p-6 sm:p-8 rounded-2xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+            <div class="relative overflow-hidden rounded-xl h-50">
+              <img src="public/images/comsci.png"
+                alt="art cover" 
+                loading="lazy" 
+                width="500" 
+                height="500" 
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"/>
+            </div>
+            <div class="mt-6 relative">
+              <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+                สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                สาขาวิชาวิทยาการคอมพิวเตอร์มีเป้าหมายเพื่อพัฒนานักศึกษาให้มีทักษะการเขียนโปรแกรม 
+                การวิเคราะห์และออกแบบระบบ รวมถึงการประยุกต์ใช้งานเทคโนโลยีสารสนเทศ 
+                เพื่อการแก้ปัญหาในหลากหลายสาขา
+              </p>
+              <a class="inline-block text-info dark:text-blue-300 font-medium hover:underline" 
+                 href="https://www.cs.mju.ac.th/home" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                ดูเพิ่มเติม
+              </a>
+            </div>
+          </div>
+      
+          <!-- การ์ดที่ 2 -->
+          <div class="group p-6 sm:p-8 rounded-2xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
+            <div class="relative overflow-hidden rounded-xl h-50">
+              <img src="public/images/map.png"
+                alt="art cover" 
+                loading="lazy" 
+                width="500" 
+                height="500" 
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"/>
+            </div>
+            <div class="mt-6 relative">
+              <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+                สถานที่จัดอบรม
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                ณ ห้องปฏิบัติการคอมพิวเตอร์ ชั้น 6 อาคาร 60 ปี <br/>แม่โจ้
+                สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้
+              </p>
+              <a class="inline-block text-info dark:text-blue-300 font-medium hover:underline" 
+                 href="https://maps.app.goo.gl/EgkFwh6pQybppmpSA" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                ดูเพิ่มเติม
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      </div>
+  </Container>
+</div>

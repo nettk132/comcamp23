@@ -1,0 +1,125 @@
+---
+import Container from "./Container.astro"
+
+---
+
+<div id="features">
+  <Container>
+    <div class="md:w-2/3 lg:w-1/2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
+        <path d="M2.25 4.5A2.25 2.25 0 014.5 2.25h7.5a2.25 2.25 0 012.25 2.25v15a2.25 2.25 0 01-2.25 2.25H4.5A2.25 2.25 0 012.25 19.5v-15zM15.75 4.5A2.25 2.25 0 0118 2.25h1.5a2.25 2.25 0 012.25 2.25v15a2.25 2.25 0 01-2.25 2.25H18a2.25 2.25 0 01-2.25-2.25v-15z" />
+      </svg>
+      
+      
+      <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
+        Learning scope
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300">เทคโนโลยีและนวัตกรรม โดยเฉพาะปัญญาประดิษฐ์ (AI) มีบทบาทสำคัญในการสนับสนุนข้อมูลด้านการศึกษาและการพัฒนาทักษะในหลากหลายด้าน เช่น การเกษตร การแพทย์ และการศึกษา AI ถูกออกแบบให้เลียนแบบการทำงานของสมองมนุษย์ เพื่อให้สามารถโต้ตอบกับผู้ใช้ได้เหมือนมนุษย์ โดยกระบวนการพัฒนาเริ่มจากการเรียนรู้ รับข้อมูล ประมวลผล และนำมาประยุกต์ใช้งาน ซึ่งชุดข้อมูล (Data Set) เป็นหัวใจสำคัญในการสร้างความรู้และโมเดล AI การเรียนรู้ AI ช่วยพัฒนาความคิดสร้างสรรค์และสร้างประสบการณ์ใหม่ที่สามารถนำไปใช้พัฒนาชุมชนและคุณภาพชีวิตในอนาคต โดยมีขั้นตอนการทำงาน 3 ขั้นตอน ดังนี้</p>
+    </div>
+    <div
+      class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
+    >
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
+            class="w-12"
+            width="512"
+            height="512"
+            alt="burger illustration"
+          />
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
+            >
+            Gather
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              เป็นการรวบรวมข้อมูลที่จะใช้ เช่นรูปภาพต่างๆ หรือ เสียง หรือ ท่าทาง
+            </p>
+          </div>
+         
+        </div>
+      </div>
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png"
+            class="w-12"
+            width="512"
+            height="512"
+            alt="burger illustration"
+          />
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
+            >
+            Train
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              เป็นขั้นตอนการสร้างโมเดล Deep Learning ซึ่งสามารถกำหนดค่าพารามิเตอร์ต่างๆ ได้ ด้วยโปรแกรม Teachable Machine
+            </p>
+          </div>
+          <a href="https://teachablemachine.withgoogle.com/" class="flex items-center justify-between group-hover:text-secondary">
+            <span class="text-sm">Read more</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+              <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
+            </svg>                
+          </a>
+        </div>
+      </div>
+      <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+        <div class="relative space-y-8 py-12 p-8">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png"
+            class="w-12"
+            width="512"
+            height="512"
+            alt="burger illustration"
+          />
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
+            >
+            Export
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              เป็นขั้นตอนของการทดสอบโมเดลโดยการใส่รูปภาพ เสียง หรือทำท่าทางใหม่ แล้วให้โมเดลที่สร้างขึ้นตอบออกมาว่าเป็นอะไร และสามารถ export โมเดลออกไปใช้ต่อในระบบหรือแพลตฟอร์ม อื่นๆ ได้
+            </p>
+          </div>
+       
+        </div>
+      </div>
+      <div
+        class="group relative bg-gray-50 dark:bg-gray-900 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
+      >
+        <div
+          class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4341/4341025.png"
+            class="w-12"
+            width="512"
+            height="512"
+            alt="burger illustration"
+          />
+
+          <div class="space-y-2">
+            <h5
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
+            >
+              IoT (Internet of Things) 
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300">
+              IoT คือการเชื่อมต่ออุปกรณ์ต่าง ๆ เข้ากับอินเทอร์เน็ต เช่น หลอดไฟอัจฉริยะ สำหรับไมโครคอนโทรลเลอร์ จะเป็นอุปกรณ์ที่ช่วยควบคุมการทำงานของอุปกรณ์ IoT ค่ายนี้เหมาะกับน้อง ๆ ที่อยากเริ่มต้นเรียนรู้การสร้างไมโครคอนโทรลเลอร์และการเชื่อมต่อ เพื่อพัฒนาอุปกรณ์ IoT ในแบบของตัวเองได้ง่ายและสนุกขึ้น!
+            </p>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>

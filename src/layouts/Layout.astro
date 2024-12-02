@@ -1,0 +1,29 @@
+---
+import AppFooter from "../components/AppFooter.astro";
+import AppHeader from "../components/AppHeader.astro"
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="public/images/logo.PNG" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Template built with tailwindcss using Tailus blocks v2">
+		
+		<title>COMCAMP CSMJU 23</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-white dark:bg-gray-900"> <div class="sticky-header"> 
+		<AppHeader /> 
+	</div> 
+	<slot /> 
+		<AppFooter/>
+</html>
+<style> html { font-family: Urbanist, sans-serif; scroll-behavior: smooth; } body { margin: 0; } 
+.sticky-header { position: -webkit-sticky; /* For Safari */
+	 position: sticky; top: 0; z-index: 1000; /* Ensure it's above other content */
+	  background-color: rgb(250, 250, 250); /* Same as the body background for a smooth look */ }

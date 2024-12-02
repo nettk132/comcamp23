@@ -1,0 +1,38 @@
+---
+import Container from "./Container.astro"
+---
+
+<div id="list">
+  <Container>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="col-span-1">
+        <ol class="list-decimal">
+          <li>ชื่อ 1</li>
+          <li>ชื่อ 2</li>
+          <li>ชื่อ 3</li>
+          <!-- Add more list items here -->
+        </ol>
+      </div>
+      <div class="col-span-1">
+        <ol start="4" class="list-decimal">
+          <li>ชื่อ 4</li>
+          <li>ชื่อ 5</li>
+          <li>ชื่อ 6</li>
+          <!-- Add more list items here -->
+        </ol>
+      </div>
+    </div>
+  </Container>
+</div>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .list-decimal {
+    list-style-type: decimal;
+  }
+</style>
