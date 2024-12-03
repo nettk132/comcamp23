@@ -5,16 +5,20 @@ import Container from "./Container.astro"
 
 <div id="features">
   <Container>
-    <div class="md:w-2/3 lg:w-1/2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-secondary">
-        <path d="M2.25 4.5A2.25 2.25 0 014.5 2.25h7.5a2.25 2.25 0 012.25 2.25v15a2.25 2.25 0 01-2.25 2.25H4.5A2.25 2.25 0 012.25 19.5v-15zM15.75 4.5A2.25 2.25 0 0118 2.25h1.5a2.25 2.25 0 012.25 2.25v15a2.25 2.25 0 01-2.25 2.25H18a2.25 2.25 0 01-2.25-2.25v-15z" />
-      </svg>
-      
-      
-      <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
-        หัวข้ออบรม
-      </h2>
-      <p class="text-gray-600 dark:text-gray-300">เทคโนโลยีและนวัตกรรม โดยเฉพาะปัญญาประดิษฐ์ (AI) มีบทบาทสำคัญในการสนับสนุนข้อมูลด้านการศึกษาและการพัฒนาทักษะในหลากหลายด้าน เช่น การเกษตร การแพทย์ และการศึกษา AI ถูกออกแบบให้เลียนแบบการทำงานของสมองมนุษย์ เพื่อให้สามารถโต้ตอบกับผู้ใช้ได้เหมือนมนุษย์ โดยกระบวนการพัฒนาเริ่มจากการเรียนรู้ รับข้อมูล ประมวลผล และนำมาประยุกต์ใช้งาน ซึ่งชุดข้อมูล (Data Set) เป็นหัวใจสำคัญในการสร้างความรู้และโมเดล AI การเรียนรู้ AI ช่วยพัฒนาความคิดสร้างสรรค์และสร้างประสบการณ์ใหม่ที่สามารถนำไปใช้พัฒนาชุมชนและคุณภาพชีวิตในอนาคต โดยมีขั้นตอนการทำงาน 3 ขั้นตอน ดังนี้</p>
+    <div class="md:w-3/3 flex flex-wrap items-start">
+      <!-- ข้อความด้านซ้าย -->
+      <div class="w-full md:w-1/2 p-4">
+        <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">
+          หัวข้ออบรม
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300">
+          เทคโนโลยีและนวัตกรรม โดยเฉพาะปัญญาประดิษฐ์ (AI) มีบทบาทสำคัญในการสนับสนุนข้อมูลด้านการศึกษาและการพัฒนาทักษะในหลากหลายด้าน เช่น การเกษตร การแพทย์ และการศึกษา AI ถูกออกแบบให้เลียนแบบการทำงานของสมองมนุษย์ เพื่อให้สามารถโต้ตอบกับผู้ใช้ได้เหมือนมนุษย์ โดยกระบวนการพัฒนาเริ่มจากการเรียนรู้ รับข้อมูล ประมวลผล และนำมาประยุกต์ใช้งาน ซึ่งชุดข้อมูล (Data Set) เป็นหัวใจสำคัญในการสร้างความรู้และโมเดล AI การเรียนรู้ AI ช่วยพัฒนาความคิดสร้างสรรค์และสร้างประสบการณ์ใหม่ที่สามารถนำไปใช้พัฒนาชุมชนและคุณภาพชีวิตในอนาคต โดยมีขั้นตอนการทำงาน 4 ขั้นตอน ดังนี้
+        </p>
+      </div>
+      <!-- รูปภาพด้านขวา -->
+      <div class="w-full md:w-1/4 p-4 flex justify-center items-center custom-img-container">
+        <img src="public/images/ai.png" alt="ภาพที่เกี่ยวข้องกับหัวข้ออบรม" class="rounded-lg shadow-md">
+      </div>
     </div>
     <div
       class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4"
@@ -22,7 +26,7 @@ import Container from "./Container.astro"
       <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
         <div class="relative space-y-8 py-12 p-8">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
+            src="public/images/data-gathering.png"
             class="w-12"
             width="512"
             height="512"
@@ -31,7 +35,7 @@ import Container from "./Container.astro"
 
           <div class="space-y-2">
             <h5
-              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary"
+              class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary" 
             >
             Gather
             </h5>
@@ -43,14 +47,14 @@ import Container from "./Container.astro"
         </div>
       </div>
       <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-        <div class="relative space-y-8 py-12 p-8">
+        <div class="relative space-y-8 py-12 p-8 ">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png"
-            class="w-12"
-            width="512"
-            height="512"
-            alt="burger illustration"
-          />
+          src="public/images/ai-model.png"
+          class="w-12 filter brightness-0 invert"
+          width="512"
+          height="512"
+          alt="burger illustration"
+        />
 
           <div class="space-y-2">
             <h5
@@ -73,7 +77,7 @@ import Container from "./Container.astro"
       <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
         <div class="relative space-y-8 py-12 p-8">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png"
+            src="public/images/export.png"
             class="w-12"
             width="512"
             height="512"
@@ -100,7 +104,7 @@ import Container from "./Container.astro"
           class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800"
         >
           <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341025.png"
+            src="public/images/iot.png"
             class="w-12"
             width="512"
             height="512"
@@ -123,3 +127,21 @@ import Container from "./Container.astro"
     </div>
   </Container>
 </div>
+<style>
+  .custom-img-container {
+    margin-left: 150px; /* ดันรูปภาพไปทางขวา */
+    padding-right: 20px; /* เพิ่มระยะห่างจากขอบด้านขวา */
+  }
+  @media (max-width: 768px) {
+    .custom-img-container {
+      margin-left: 0; /* เอา margin-left ออกสำหรับมือถือ */
+      padding-right: 0; /* เอา padding-right ออก */
+      justify-content: center; /* จัดให้อยู่กึ่งกลาง */
+    }
+
+    .custom-img-container img {
+      max-width: 80%; /* ลดขนาดรูปภาพสำหรับหน้าจอเล็ก */
+      height: auto; /* คงอัตราส่วนเดิม */
+    }
+  }
+</style>
