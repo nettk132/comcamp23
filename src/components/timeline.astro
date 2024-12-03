@@ -1,0 +1,286 @@
+---
+import Container from "./Container.astro";
+---
+
+<div id="timeline">
+    <Container>
+        <div class="timeline-container">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item highlight">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">เปิดรับสมัคร</h3>
+                    <p class="timeline-date">
+                        วันที่ 5 ธันวาคม 2567
+                        <span class="timeline-icon">
+                            <i class="fas fa-map-pin"></i>
+                        </span>
+                    </p>
+                    <p class="timeline-description">เริ่มต้นการสมัครเข้าค่าย COMCAMP CSMJU 23</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">ปิดรับสมัคร</h3>
+                    <p class="timeline-date">วันที่ 25 ธันวาคม 2567</p>
+                    <p class="timeline-description">สิ้นสุดการรับสมัคร อย่าลืมสมัครให้ทัน!</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">ประกาศรายชื่อ</h3>
+                    <p class="timeline-date">วันที่ 28 ธันวาคม 2567</p>
+                    <p class="timeline-description">ประกาศรายชื่อผู้เข้าร่วมค่ายบนเว็บไซต์</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">เปิดค่าย</h3>
+                    <p class="timeline-date">วันที่ 24 มกราคม 2568</p>
+                    <p class="timeline-description">พอเจอกันน</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">ปิดค่าย</h3>
+                    <p class="timeline-date">วันที่ 26 มกราคม 2568</p>
+                    <p class="timeline-description">แล้วเจอกันใหม่</p>
+                </div>
+            </div>
+        </div>
+    </Container>
+</div>
+
+
+<style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes highlight {
+        0%, 100% {
+            background-color: #4ADE80;
+        }
+        50% {
+            background-color: #A7F3D0;
+        }
+    }
+
+    #timeline {
+        padding: 4rem 0;
+        background: linear-gradient(180deg, #0A101F, #0A101F, #0A101F, ##0A101F); /* ครอบคลุมทั้งข้างบนและข้างล่าง */
+        color: #ffffff;
+    }
+
+    .timeline-container {
+        position: relative;
+        padding: 1rem 0;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: #4ADE80;
+        transition: background-color 0.3s ease;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin: 3rem 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeInUp 0.8s ease forwards;
+        opacity: 0;
+    }
+
+    .timeline-item[data-active="true"] ~ .timeline-container::before {
+        background: #4ADE80; /* เส้นสว่างตามตำแหน่ง */
+        animation: highlight 1.5s infinite ease-in-out;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+        background: #ffffff;
+        border: 4px solid #4ADE80;
+        border-radius: 50%;
+        z-index: 10;
+        box-shadow: 0 0 10px rgba(74, 222, 128, 0.8);
+    }
+
+    .timeline-content {
+        position: relative;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        max-width: 350px;
+        color: #e5e7eb;
+        transform: scale(0.95);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-content:hover {
+        transform: scale(1);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .timeline-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-date {
+        font-size: 1rem;
+        color: #B0BEC5;
+        margin-bottom: 0.75rem;
+    }
+
+    .timeline-description {
+        font-size: 1rem;
+        color: #CFD8DC;
+        line-height: 1.6;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: auto;
+        text-align: right;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: auto;
+        text-align: left;
+    }
+    @keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        box-shadow: 0 0 25px rgba(255, 215, 0, 1), 0 0 40px rgba(255, 215, 0, 0.8);
+    }
+}
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 4px solid #4ADE80;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.8);
+}
+
+.timeline-item.highlight .timeline-dot {
+    background: #FFD700; /* สีทองสำหรับจุดไฮไลต์ */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+    animation: pulse 1.5s infinite;
+}
+@media (max-width: 768px) {
+    #timeline {
+        padding: 2rem 1rem; /* ลดระยะ Padding */
+    }
+
+    .timeline-container {
+        padding: 0;
+    }
+
+    .timeline-container::before {
+        left: 20%; /* เลื่อนเส้น Timeline ให้อยู่ใกล้ซ้าย */
+        width: 2px; /* ลดความกว้างของเส้น */
+    }
+
+    .timeline-item {
+        flex-direction: column; /* เปลี่ยนการจัดเรียงเป็นแนวตั้ง */
+        margin: 2rem 0; /* ลดระยะระหว่างไอเท็ม */
+        padding: 0 1rem; /* ลด Padding ขอบซ้าย-ขวา */
+        align-items: flex-start;
+        text-align: left; /* จัดข้อความชิดซ้าย */
+        position: relative; /* ใช้เพื่อจัดการตำแหน่ง */
+    }
+
+    .timeline-dot {
+        left: 20%; /* ย้ายจุดไทม์ไลน์มาใกล้เส้น */
+        width: 12px; /* ลดขนาดจุด */
+        height: 12px;
+    }
+
+    .timeline-content {
+        max-width: 75%; /* ขยายให้เต็มหน้าจอ 75% */
+        padding: 1rem; /* ลด Padding ภายใน */
+        transform: none; /* ปิดเอฟเฟกต์ Scale */
+        box-shadow: none; /* ปิดเงา */
+        position: relative;
+        left: 25%; /* เลื่อนกล่องข้อความให้อยู่ด้านขวาของเส้น */
+    }
+
+    .timeline-content:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .timeline-title {
+        font-size: 1.2rem; /* ลดขนาดตัวอักษร */
+    }
+
+    .timeline-date {
+        font-size: 0.9rem; /* ลดขนาดวันที่ */
+    }
+
+    .timeline-description {
+        font-size: 0.9rem; /* ลดขนาดรายละเอียด */
+    }
+
+    .timeline-container::before {
+        background: #4ADE80; /* คงสีเส้นไว้ */
+        transition: background-color 0.3s ease;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin: 0; /* ลบ Margin ของข้อความ */
+        text-align: left; /* จัดข้อความชิดซ้าย */
+    }
+}
+</style>

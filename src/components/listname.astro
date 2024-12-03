@@ -17,7 +17,7 @@ import Container from "./Container.astro"
           <tr>
             <td class="px-4 py-2 text-center text-white">1</td>
             <td class="px-4 py-2 text-center text-white">อภิเชษฐ์ เทพนันตา</td>
-            <td class="px-4 py-2 text-center text-white">โรงเรยีนีบ้านนาบัววิทยา</td>
+            <td class="px-4 py-2 text-center text-white">โรงเรียนบ้านนาบัววิทยา</td>
           </tr>
           <tr>
             <td class="px-4 py-2 text-center text-white">2</td>
@@ -30,42 +30,22 @@ import Container from "./Container.astro"
             <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
           </tr>
           <tr>
-            <td class="px-4 py-2 text-center text-white">4</td>
+            <td class="px-4 py-2 text-center text-white">3</td>
             <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
             <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
           </tr>
           <tr>
-            <td class="px-4 py-2 text-center text-white">5</td>
+            <td class="px-4 py-2 text-center text-white">3</td>
             <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
             <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
           </tr>
           <tr>
-            <td class="px-4 py-2 text-center text-white">6</td>
+            <td class="px-4 py-2 text-center text-white">3</td>
             <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
             <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
           </tr>
           <tr>
-            <td class="px-4 py-2 text-center text-white">7</td>
-            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
-            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-2 text-center text-white">8</td>
-            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
-            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-2 text-center text-white">9</td>
-            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
-            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-2 text-center text-white">10</td>
-            <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
-            <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-2 text-center text-white">11</td>
+            <td class="px-4 py-2 text-center text-white">3</td>
             <td class="px-4 py-2 text-center text-white">ชื่อ 3</td>
             <td class="px-4 py-2 text-center text-white">โรงเรียน 3</td>
           </tr>
@@ -79,81 +59,101 @@ import Container from "./Container.astro"
   .table-container {
     max-height: 300px;
     overflow-y: auto;
-    background: #000;
-    padding: 2px;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    padding: 10px;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 30px rgba(255, 20, 147, 0.6);
-    border: 2px solid rgba(255, 20, 147, 0.5);
+    box-shadow: 0 4px 20px rgba(255, 105, 180, 0.8);
+    border: 2px solid rgba(255, 20, 147, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .table-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 30px rgba(255, 105, 180, 1);
   }
 
   table {
     width: 100%;
     border-collapse: collapse;
-    background: #000;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     overflow: hidden;
   }
 
   th, td {
-    padding: 8px;
+    padding: 12px;
     text-align: center;
     color: white;
   }
 
   th {
-    background: rgba(255, 20, 147, 0.2);
+    background: rgba(255, 20, 147, 0.3);
     color: #fff;
+    font-size: 1.1rem;
+    animation: fadeIn 0.5s ease-in-out;
   }
 
   tr:nth-child(odd) {
-    background: #1f1f1f;
+    background: rgba(30, 30, 30, 0.8);
   }
 
   tr:nth-child(even) {
-    background: #444;
+    background: rgba(60, 60, 60, 0.8);
   }
 
   tr:hover {
-    background: rgba(255, 20, 147, 0.1);
+    background: rgba(255, 20, 147, 0.2);
+    cursor: pointer;
+    animation: rowHover 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes rowHover {
+    from {
+      background: rgba(255, 20, 147, 0.1);
+    }
+    to {
+      background: rgba(255, 20, 147, 0.3);
+    }
   }
 
   /* Media Query for Mobile */
   @media (max-width: 768px) {
     .table-container {
-      max-height: 200px; /* ลดความสูงตาราง */
-      border-radius: 8px; /* มุมมนเล็กลง */
-      padding: 1px; /* ลด padding */
+      max-height: 200px;
+      border-radius: 8px;
     }
 
     table {
-      font-size: 0.9rem; /* ลดขนาดฟอนต์ */
+      font-size: 0.9rem;
     }
 
     th, td {
-      padding: 4px; /* ลด padding */
-    }
-
-    th {
-      font-size: 1rem; /* ปรับขนาดฟอนต์หัวตาราง */
+      padding: 8px;
     }
   }
 
   @media (max-width: 480px) {
     .table-container {
       max-height: 150px;
-      padding: 0;
     }
 
     table {
-      font-size: 0.8rem; /* ลดขนาดฟอนต์ลงอีก */
+      font-size: 0.8rem;
     }
 
     th, td {
-      padding: 2px;
-    }
-
-    th {
-      font-size: 0.9rem; /* ปรับฟอนต์หัวตารางสำหรับหน้าจอเล็กมาก */
+      padding: 6px;
     }
   }
 </style>

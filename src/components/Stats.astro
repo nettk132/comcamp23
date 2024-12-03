@@ -1,50 +1,141 @@
 ---
+// Assuming you're using Astro with Tailwind CSS
 import Container from "./Container.astro";
-
-
 ---
 
 <div id="solution">
-  
-    <Container>
-      <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-        <div class="container mx-auto px-6 py-10 space-y-12">
-        
-         
-      
-          <!-- Main Content Section -->
-          <div class="md:flex md:gap-6 lg:gap-12 lg:items-center">
-            <!-- Left Column: Image -->
-            <div class="md:w-5/12 lg:w-1/2">
-              <img
-                src="public/images/certificate.png"
-                alt="Image"
-                loading="lazy"
-                class="w-full"
-              />
-            </div>
-      
-            <!-- Right Column: Text Content -->
-            <div class="md:w-7/12 lg:w-1/2">
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                once in a
-lifetime opportunity!<br>
-สิ่งที่พวกเราทุกคนจะได้รับในการเข้าร่วม
-              </h2>
-              <p class="my-8 text-gray-600 dark:text-gray-300">
-                ได้รับเกียรติบัตร
-                พิชิตค่าย สามารถใช้ยื่นในรอบ Portfolio สาขาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้
-              </p>
-      
-             
-            </div>
-          </div>
+  <Container>
+    <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+      <div class="container mx-auto px-6 py-12">
+        <!-- Main Content Section -->
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white md:text-5xl">
+            🏆 สิ่งที่พวกเราทุกคนจะได้รับในการเข้าร่วม
+          </h2>
         </div>
-      
-   
-      </body>
-    
-    </Container>
 
-    <script type="visit-count" src="/scripts/visitor-counter.js"></script>
+        <!-- List Section -->
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- List Item 1 -->
+          <li
+            class="flex flex-col items-center text-center space-y-4 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md hover:shadow-2xl transition duration-500 transform hover:scale-105"
+          >
+            <img
+              src="/images/folder.png"
+              alt="Document Icon"
+              class="w-24 h-24 animate-bounce"
+            />
+            <span class="text-2xl font-bold text-gray-900 dark:text-gray-200">
+              เอกสารการอบรม
+            </span>
+            <p class="text-lg text-gray-600 dark:text-gray-400">
+              ทุกข้อมูลสำคัญรวมไว้ให้ในที่เดียว
+            </p>
+          </li>
+
+          <!-- List Item 2 -->
+          <li
+            class="flex flex-col items-center text-center space-y-4 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md hover:shadow-2xl transition duration-500 transform hover:scale-105"
+          >
+            <img
+              src="/images/tshirt.png"
+              alt="Shirt Icon"
+              class="w-24 h-24 animate-bounce"
+            />
+            <span class="text-2xl font-bold text-gray-900 dark:text-gray-200">
+              เสื้อค่าย
+            </span>
+            <p class="text-lg text-gray-600 dark:text-gray-400">
+              ดีไซน์พิเศษเพื่อคุณโดยเฉพาะ
+            </p>
+          </li>
+
+          <!-- List Item 3 -->
+          <li
+            class="flex flex-col items-center text-center space-y-4 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md hover:shadow-2xl transition duration-500 transform hover:scale-105"
+          >
+            <img
+              src="/images/backpack.png"
+              alt="Backpack Icon"
+              class="w-24 h-24 animate-bounce"
+            />
+            <span class="text-2xl font-bold text-gray-900 dark:text-gray-200">
+              กระเป๋าค่าย
+            </span>
+            <p class="text-lg text-gray-600 dark:text-gray-400">
+              ใส่ของได้เต็มที่พร้อมลุยทุกกิจกรรม
+            </p>
+          </li>
+
+          <!-- List Item 4 -->
+          <li
+            class="flex flex-col items-center text-center space-y-4 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md hover:shadow-2xl transition duration-500 transform hover:scale-105"
+          >
+            <img
+              src="/images/bibimbap.png"
+              alt="Food Icon"
+              class="w-24 h-24 animate-bounce"
+            />
+            <span class="text-2xl font-bold text-gray-900 dark:text-gray-200">
+              อาหารและเบรค
+            </span>
+            <p class="text-lg text-gray-600 dark:text-gray-400">
+              อร่อยครบทุกมื้อเติมพลังได้เต็มที่
+            </p>
+          </li>
+
+          <!-- List Item 5 -->
+          <li
+            class="flex flex-col items-center text-center space-y-4 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md hover:shadow-2xl transition duration-500 transform hover:scale-105"
+          >
+            <img
+              src="/images/double-bed.png"
+              alt="Bed Icon"
+              class="w-24 h-24 animate-bounce"
+            />
+            <span class="text-2xl font-bold text-gray-900 dark:text-gray-200">
+              ที่พัก
+            </span>
+            <p class="text-lg text-gray-600 dark:text-gray-400">
+              พักผ่อนอย่างสบายเพื่อพร้อมเรียนรู้
+            </p>
+          </li>
+
+          <!-- List Item 6 -->
+          <li
+            class="flex flex-col items-center text-center space-y-4 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md hover:shadow-2xl transition duration-500 transform hover:scale-105"
+          >
+            <img
+              src="/images/certificate.png"
+              alt="Certificate Icon"
+              class="w-24 h-24 animate-bounce"
+            />
+            <span class="text-2xl font-bold text-gray-900 dark:text-gray-200">
+              ใบประกาศนียบัตร
+            </span>
+            <p class="text-lg text-gray-600 dark:text-gray-400">
+              การันตีความสำเร็จที่ได้รับ
+            </p>
+          </li>
+
+          <!-- List Item 7 -->
+          <li
+            class="flex flex-col items-center text-center space-y-4 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md hover:shadow-2xl transition duration-500 transform hover:scale-105"
+          >
+            <img
+              src="/images/book.png"
+              alt="Knowledge Icon"
+              class="w-24 h-24 animate-bounce"
+            />
+            <span class="text-2xl font-bold text-gray-900 dark:text-gray-200">
+              ความรู้และประสบการณ์
+            </span>
+            <p class="text-lg text-gray-600 dark:text-gray-400">
+              เพิ่มพูนความรู้และพัฒนาทักษะ
+            </p>
+          </li>
+        </ul>
+      </div>
+    </body>
+  </Container>
 </div>

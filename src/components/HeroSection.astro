@@ -1,28 +1,30 @@
 ---
 import Container from "./Container.astro"
-
 ---
 
-<div class="relative" id="home">
-    <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
-        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-    </div>
+<div class="relative bg-animation" id="home">
+    <!-- ดาวและภูเขา -->
+    <div class="stars"></div>
+    <div class="mountains"></div>
+    <div class="blur-layer"></div>
+
     <Container>
         <div class="relative pt-36 ml-auto">
           <div class="flex flex-wrap lg:flex-nowrap items-center lg:items-start mx-auto lg:space-x-8">
             <!-- Content Section -->
             <div class="lg:w-2/3 text-left">
-              <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl leading-relaxed">
+              <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-2xl xl:text-6xl leading-relaxed">
                 COMCAMP CSMJU 23<br>
-                <span class="text-primary dark:text-white text-lg">
-                  เปิดรับสมัครแล้วตั้งเเต่วันที่ 5 ธันวาคม 2567 - 24 ธันวาคม 2567
-                </span>
+                <div class="bow-container" style="margin-top: 10px;">
+                  <span class="bow-text" style="margin-right: 60px;">
+                    เปิดรับสมัครแล้วตั้งแต่วันที่ 5 - 26 ธันวาคม 2567
+                  </span>
+                </div>
               </h1>
               <p class="mt-8 text-gray-700 dark:text-gray-300">
-                ค่ายยุวชนคอมพิวเตอร์ หรือ คอมแคมป์ เป็นค่ายที่จัดขึ้นโดยสาขาวิชาวิทยาการคอมพิวเตอร์
-                คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้เพื่อเปิดโอกาสให้น้องๆที่สนใจเรียนรู้และฝึกฝนทักษะด้านคอมพิวเตอร์อย่างสนุกสนานเป็นเวลา
-                3 วัน 2 คืน โดยในปี พ.ศ. 2568 จัดขึ้นระหว่างวันที่ 24 ถึงวันที่ 26 มกราคม ณ มหาวิทยาลัยแม่โจ้ จังหวัดเชียงใหม่
+                ค่ายยุวชนคอมพิวเตอร์ หรือ คอมแคมป์ เป็นค่ายที่จัดขึ้นโดยสาขาวิชาวิทยาการคอมพิวเตอร์<br>
+                คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้เพื่อเปิดโอกาสให้น้องๆที่สนใจเรียนรู้และฝึกฝนทักษะ<br>ด้านคอมพิวเตอร์อย่างสนุกสนานเป็นเวลา
+                3 วัน 2 คืน โดยในปี พ.ศ. 2568 
               </p>
               <div class="mt-16 flex flex-wrap justify-start gap-y-4 gap-x-6">
                 <a
@@ -39,41 +41,220 @@ import Container from "./Container.astro"
                   rel="noopener noreferrer"
                   class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-gray-500 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
                 >
-                  <span class="relative text-base font-semibold text-white">ดูรายชื่อ</span>
+                  <span class="relative text-base font-semibold text-white">ตรวจสอบรายชื่อ</span>
                 </a>
               </div>
             </div>
           
             <!-- Image Section -->
-            <div class="lg:w-1/3 mt-8 lg:mt-0">
+            <div class="lg:w-1/2 mt-4 lg:mt-6 text-center">
               <img
                 src="public/images/logo.PNG"
                 alt="ภาพประกอบ"
-                class="w-full h-auto rounded-lg shadow-lg"
+                class="logo-animation w-full h-auto rounded-lg mx-auto logo-adjust"
               />
+              <div class="mt-6 text-gray-700 dark:text-gray-300 xl:text-3xl date-text">
+                24-26 January 2025
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+            <div class="p-4">
+              <img src="./public/images/comkub.jpg" class="h-16 w-auto mx-auto hover-scale" loading="lazy" alt="client logo" />
+            </div>
+            <div class="p-4">
+              <img src="./public/images/studio.png" class="h-16 w-auto mx-auto hover-scale" loading="lazy" alt="client logo" />
+            </div>
+            <div class="p-4">
+              <img src="public/images/CSMJU-Logo-Colour.png" class="h-16 w-auto mx-auto hover-scale" loading="lazy" alt="client logo" />
+            </div>
+            <div class="p-4">
+              <img src="public/images/Sci-MJU_Logo-Color.png" class="h-16 w-auto mx-auto hover-scale" loading="lazy" alt="client logo" />
+            </div>
+            <div class="p-4">
+              <img src="public/images/MJU_Logo-Color.png" class="h-16 w-auto mx-auto hover-scale" loading="lazy" alt="client logo" />
+            </div>
+            <div class="p-4">
+              <img src="public/images/LOGO CSMJU Stroke.png" class="h-16 w-auto mx-auto hover-scale" loading="lazy" alt="client logo" />
             </div>
           </div>
           
-            <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./public/images/comkub.jpg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                  </div>
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                  <img src="./public/images/studio.png" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                </div>
-                <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
-                  <img src="public/images/logo.PNG" class="h-9 w-auto m-auto" loading="lazy" alt="client logo" width="" height="" />
-                </div>
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="public/images/logo.PNG" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                  </div>
-                  <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
-                    <img src="public/images/logo.PNG" class="h-8 w-auto m-auto" loading="lazy" alt="client logo" width="" height="" />
-                  </div>
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="public/images/logo.PNG" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="" />
-                </div>
-              </div>
         </div>
     </Container>
 </div>
+
+<style>
+  /* การตั้งค่าพื้นหลัง */
+  .bg-animation {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #0f172a, #1e293b, #0f172a); /* ไล่สีพื้นหลัง */
+  }
+
+  /* ดาว */
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('public/images/stars.png') repeat;
+    animation: moveStars 50s linear infinite;
+  }
+
+  /* ภูเขา */
+  .mountains {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 50%;
+    background: url('public/images/mountains.png') repeat-x;
+    background-size: contain;
+    animation: moveMountains 30s linear infinite;
+  }
+
+ 
+
+  /* อนิเมชันลอยโลโก้ */
+  .logo-animation {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .bow-container {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #FFD700; /* สีพื้นหลังหลักของกรอบ */
+    color: #000; /* สีข้อความ */
+    font-size: 1.125rem; /* ขนาดข้อความ */
+    font-weight: bold; /* น้ำหนักข้อความ */
+    text-align: center;
+    border-radius: 8px; /* ทำให้ขอบมนเล็กน้อย */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาสำหรับกรอบ */
+  }
+
+  /* สร้างปีกโบว์ซ้าย */
+  .bow-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px; /* ยื่นออกมาทางซ้าย */
+    width: 40px;
+    height: 20px;
+    background: #FFC700; /* สีของปีกโบว์ */
+    border-radius: 4px; /* มนขอบ */
+    transform: translateY(-50%) rotate(-15deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* เงาสำหรับปีก */
+  }
+
+  /* สร้างปีกโบว์ขวา */
+  .bow-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -30px; /* ยื่นออกมาทางขวา */
+    width: 40px;
+    height: 20px;
+    background: #FFC700; /* สีของปีกโบว์ */
+    border-radius: 4px; /* มนขอบ */
+    transform: translateY(-50%) rotate(15deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* เงาสำหรับปีก */
+  }
+
+  .bow-text {
+    position: relative;
+  }
+
+  .logo-animation {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .logo-animation:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อ Hover */
+  }
+
+  .text-center {
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+  }
+
+
+  .text-lg {
+    font-size: 1.125rem; /* ขนาดตัวอักษรใหญ่ขึ้นเล็กน้อย */
+  }
+
+  .mt-4 {
+    margin-top: 1rem; /* เว้นระยะด้านบน */
+  }
+
+  .rounded-lg {
+    border-radius: 0.5rem; /* ขอบมน */
+  }
+
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bow-text {
+  font-size: 1.25rem; /* ขนาดตัวอักษร */
+  font-weight: bold; /* ตัวหนา */
+  margin-right: 0; /* ลด margin */
+  padding-left: 60px; /* เพิ่มระยะห่างซ้าย */
+}
+
+/* สำหรับหน้าจอมือถือ */
+@media (max-width: 1024px) {
+  .bow-text {
+    font-size: 1rem; /* ขนาดตัวอักษรเล็กลง */
+    margin-right: 10px; /* ปรับระยะขวา */
+    padding-left: 30px; /* ลดระยะห่างซ้าย */
+  }
+}
+
+
+  .logo-adjust {
+  margin-top: -150px; /* ระยะห่างเดิมสำหรับคอมพิวเตอร์ */
+}
+
+.date-text {
+  margin-top: -70px; /* ระยะห่างเดิมสำหรับคอมพิวเตอร์ */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .logo-adjust {
+    margin-top: 0; /* รีเซ็ตระยะห่างสำหรับมือถือ */
+    width: 80%; /* ลดขนาดโลโก้ */
+    max-width: 300px; /* ตั้งขนาดสูงสุด */
+  }
+
+  .date-text {
+    margin-top: 1rem; /* เพิ่มระยะห่างในมือถือ */
+    font-size: 1.25rem; /* ลดขนาดตัวอักษร */
+  }
+}
+
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 3s ease-in-out infinite;    /* เวลาและความลื่นไหล */
+  }
+  .hover-scale:hover {
+    transform: scale(1.1); /* ขยายขนาด 10% */
+  }
+
+
+
+</style>

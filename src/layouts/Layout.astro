@@ -1,8 +1,8 @@
 ---
 import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro"
----
+import AppHeader from "../components/AppHeader.astro";
 
+---
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +17,37 @@ import AppHeader from "../components/AppHeader.astro"
 
 		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-white dark:bg-gray-900"> <div class="sticky-header"> 
-		<AppHeader /> 
-	</div> 
-	<slot /> 
+	<body class="bg-white dark:bg-gray-900">
+		<div id="header" class="sticky-header"> 
+			<AppHeader /> 
+		</div> 
+		<slot /> 
 		<AppFooter/>
+	</body>
 </html>
-<style> html { font-family: Urbanist, sans-serif; scroll-behavior: smooth; } body { margin: 0; } 
-.sticky-header { position: -webkit-sticky; /* For Safari */
-	 position: sticky; top: 0; z-index: 1000; /* Ensure it's above other content */
-	  background-color: rgb(250, 250, 250); /* Same as the body background for a smooth look */ }
+
+<style>
+  html {
+    font-family: Urbanist, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .sticky-header {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: rgba(250, 250, 250, 0.9); /* Default background (slightly transparent) */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  }
+
+  .sticky-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background on scroll */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Add shadow for effect */
+  }
+</style>
+

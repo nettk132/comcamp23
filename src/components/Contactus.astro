@@ -1,0 +1,130 @@
+---
+import Container from "./Container.astro";
+---
+
+<div id="contact" class="py-16 bg-gray-800 text-white">
+    <Container>
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">ติดต่อเรา</h2>
+
+            <div class="flex flex-wrap justify-between items-stretch space-y-6 md:space-y-0 md:space-x-6">
+                <!-- กล่องช่องทางติดต่อ -->
+                <div class="contact-box bg-gray-700 p-6 rounded-lg shadow-md w-full md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-center">ช่องทางติดต่อ</h3>
+                    <div class="flex flex-col space-y-4">
+                        <!-- Contact 1 -->
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone-alt text-2xl text-green-500"></i>
+                            <span>พี่เนท: <a href="tel:+6631054734" class="hover:text-green-500">063-105-4734</a></span>
+                        </div>
+                        <!-- Contact 2 -->
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone-alt text-2xl text-green-500"></i>
+                            <span>พี่บีม: <a href="tel:+66968486334" class="hover:text-green-500">096-848-6334</a></span>
+                        </div>
+                        <!-- Contact 3 -->
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone-alt text-2xl text-green-500"></i>
+                            <span>พี่ซี: <a href="tel:+66925234627" class="hover:text-green-500">092-523-4627</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- กล่องช่องทางติดตาม -->
+                <div class="follow-box bg-gray-700 p-6 rounded-lg shadow-md w-full md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-center">ช่องทางติดตาม</h3>
+                    <ul class="space-y-4">
+                        <!-- Tiktok -->
+                        <li>
+                            <div class="flex items-center space-x-3">
+                                <i class="fab fa-tiktok text-2xl"></i>
+                                <span>TikTok: <a href="https://www.tiktok.com/@cs_mju" class="hover:text-green-500">@cs_mju</a></span>
+                            </div>
+                        </li>
+                        <!-- Facebook -->
+                        <li>
+                            <div class="flex items-center space-x-3">
+                                <i class="fab fa-facebook-square text-2xl text-blue-500"></i>
+                                <span>Facebook: <a href="https://www.facebook.com/CCCSMJU" class="hover:text-green-500">CompCamp CSMJU</a></span>
+                            </div>
+                        </li>
+                    <!-- YouTube -->
+<li>
+    <div class="flex items-center space-x-3">
+        <i class="fab fa-youtube text-2xl text-red-500"></i>
+        <span>YouTube: <a href="https://www.youtube.com/@comscimaejo/featured" class="hover:text-green-500">comscimaejo</a></span>
+    </div>
+</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </Container>
+</div>
+
+<style>
+#contact {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        to bottom,
+        #0f172a, /* น้ำเงินเข้มด้านบน */
+        #1e293b 35%, /* กลางสีน้ำเงินเทา */
+        #1e3a4c 70%, /* น้ำเงินสดใส */
+        #0f172a /* น้ำเงินเข้มด้านล่าง */
+    );
+}
+
+.contact-box, .follow-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* ตั้งค่าความกว้างเริ่มต้นเต็มจอ */
+}
+
+.contact-box:hover, .follow-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap; /* รองรับการแสดงผลหลายแถวในจอเล็ก */
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .flex {
+        flex-wrap: nowrap; /* บังคับให้อยู่แถวเดียวในจอใหญ่ */
+    }
+
+    .contact-box, .follow-box {
+        width: 48%; /* แบ่งพื้นที่ครึ่งจอในจอใหญ่ */
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #10B981;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+</style>
